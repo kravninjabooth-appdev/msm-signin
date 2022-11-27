@@ -15,6 +15,60 @@
   </head>
 
   <body>
+
+    <nav>
+      <ul>
+         <li>
+            <a href="/user_sign_in">
+              Sign in
+             </a>
+          </li>
+          <li>
+            <a href="/user_sign_up">
+               Sign up
+              </a>
+           </li>
+            <li>
+              <a href="/">
+                Home
+              </a>
+            </li>
+      </ul>
+    </nav>
+
+      <h1>Homepage</h1>
+
+    <ul>
+      <li>
+        <a href="/directors">
+          All directors
+        </a>
+        <ul>
+          <li>
+            <a href="/directors/youngest">
+              Youngest director
+            </a>
+          </li>
+          <li>
+            <a href="/directors/eldest">
+              Eldest director
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/movies">
+          All movies
+        </a>
+      </li>
+      <li>
+        <a href="/actors">
+          All actors
+        </a>
+      </li>
+    </ul>
+
+
     <%= yield %>
   </body>
 </html>

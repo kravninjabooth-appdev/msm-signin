@@ -45,6 +45,10 @@ Rails.application.routes.draw do
   get("/user_sign_out", { :controller => "user_authentication", :action => "destroy_cookies" })
              
   #------------------------------
+  # HOME
+  get("/", {:controller => "home", :action => "homepage"})
+
+  #------------------------------
 
   # Routes for the Character resource:
 
