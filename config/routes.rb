@@ -46,7 +46,7 @@ Rails.application.routes.draw do
              
   #------------------------------
   # HOME
-  get("/", {:controller => "home", :action => "homepage"})
+  get("/", {:controller => "application", :action => "homepage"})
 
   #------------------------------
 
