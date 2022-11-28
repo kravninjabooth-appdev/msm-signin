@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MSM SIGNIN</title>
+    <%= csrf_meta_tags %>
+
+    <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
+    <meta charset="utf-8">
+
+    <!-- Make it responsive to small screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+
+  <body>
+
+    <nav>
+      <ul>
+         <li>
+            <a href="/user_sign_in">
+              Sign in
+             </a>
+          </li>
+          <li>
+            <a href="/user_sign_up">
+               Sign up
+              </a>
+           </li>
+            <li>
+              <a href="/">
+                Home
+              </a>
+            </li>
+      </ul>
+    </nav>
+
+      <h1>Homepage</h1>
+
+    <ul>
+      <li>
+        <a href="/directors">
+          All directors
+        </a>
+        <ul>
+          <li>
+            <a href="/directors/youngest">
+              Youngest director
+            </a>
+          </li>
+          <li>
+            <a href="/directors/eldest">
+              Eldest director
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/movies">
+          All movies
+        </a>
+      </li>
+      <li>
+        <a href="/actors">
+          All actors
+        </a>
+      </li>
+    </ul>
+
+
+    <%#= yield %>
+  </body>
+</html>
