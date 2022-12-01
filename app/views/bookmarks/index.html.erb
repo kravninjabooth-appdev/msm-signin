@@ -35,6 +35,16 @@
         Create bookmark
       </button>
     </form>
+
+    <select>
+      <% Movie.all.order(:title).each do |a_movie| %>
+        <option>
+          <%= a_movie.title%>
+        </option>
+      <% end %>
+    </select>
+
+
   </div>
 </div>
 
