@@ -26,6 +26,22 @@ class UserAuthenticationController < ApplicationController
     end
   end
 
+  def authenticate
+    username = params.fetch("input_username")
+    password = params.fetch("input_password")
+    user = User.where(:username => username).at(0)
+
+    if user && user.authenticate(password)
+      session.store(:user_id, user.id)
+
+      redirect_to("/users/#{user.username}", { :notice => "Welcome, " + user.username })
+    else
+      p status
+      p user.errors.full_messages[0]
+      redirect_to("/user_sign_in", { :alert => "Sorry, you have an error.  Not able to log you in at this time" })
+    end
+  end
+
   def destroy_cookies
     reset_session
 
