@@ -1,7 +1,8 @@
 <div>
   <div>
     <h1>
-      List of all bookmarks
+      <%# u = Users.where({ :id => user_id}).at(0) %>
+      <%#= u.first_name + u.last_name %>  's bookmarks
     </h1>
   </div>
 </div>
@@ -10,30 +11,9 @@
 
 <div>
   <div>
-    <h2>
-      Add a new bookmark
-    </h2>
+    
 
     <form action="/insert_bookmark" method="post">
-      <div>
-        <label for="user_id_box">
-          User
-        </label>
-
-        <input type="text" id="user_id_box" name="query_user_id">
-      </div>
-
-      <div>
-        <label for="movie_id_box">
-          Movie
-        </label>
-
-        <input type="text" id="movie_id_box" name="query_movie_id">
-      </div>
-
-      <button>
-        Create bookmark
-      </button>
     </form>
 
     <select>
@@ -44,6 +24,9 @@
       <% end %>
     </select>
 
+      <button>
+        Bookmark this movie!
+      </button>
 
   </div>
 </div>
