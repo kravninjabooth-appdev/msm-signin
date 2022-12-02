@@ -9,4 +9,8 @@
 #  user_id    :integer
 #
 class Bookmark < ApplicationRecord
+
+  def bookmarkuser
+    return User.where({ :id => self.user_id }).at(0)
+  end
 end

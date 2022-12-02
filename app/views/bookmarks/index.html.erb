@@ -2,7 +2,7 @@
   <div>
     <h1>
       <%# u = Users.where({ :id => user_id}).at(0) %>
-      <%#= u.first_name + u.last_name %>  's bookmarks
+      <%#= bookmarkuser.first_name + bookmarkuser.last_name %> bookmarks
     </h1>
   </div>
 </div>
@@ -10,24 +10,21 @@
 <hr>
 
 <div>
-  <div>
-    
+  <form action="/insert_bookmark" method="post">
 
-    <form action="/insert_bookmark" method="post">
-
-      <select>
-        <% Movie.all.order(:title).each do |a_movie| %>
-          <option>
-            <%= a_movie.title%>
-          </option>
-        <% end %>
-      </select>
+    <select name ="query_movie_id">
+      <% Movie.all.order(:title).each do |a_movie| %>
+        <option value="<%= a_movie.id%>">
+          <%= a_movie.title%>
+        </option>
+      <% end %>
+    </select>
 
       <button>
         Bookmark this movie!
       </button>
-    </form>
-  </div>
+    
+  </form>
 </div>
 
 <hr>
